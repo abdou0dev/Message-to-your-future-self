@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Space Grotesk', sans-serif;
     background-color: #f1f2f6;
-    min-height: 450px;
+    min-width: 450px;
     user-select: none;
 }
 
