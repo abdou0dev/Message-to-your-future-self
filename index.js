@@ -17,6 +17,7 @@ const sendBtn = document.getElementById("send-btn")
 const errorEl = document.getElementById("error")
 const deleteBtnDiv = document.getElementById("delete")
 const deleteBtn = document.getElementById("deletebtn")
+const sentMsg = document.getElementById("sent-msg")
 
 sendBtn.addEventListener("click", function(){
     if (nameField.value && emailField.value) {
@@ -25,6 +26,7 @@ sendBtn.addEventListener("click", function(){
         clearFields()
 
         deleteBtnDiv.innerHTML = `<button id="deletebtn"><img src="img/X.png"> <strong>DELETE MY MESSAGE</strong></button>`
+        deleteSendBtn()
         
     } else {
         errorEl.textContent = "*Please write your name and email adress to continue"
@@ -46,4 +48,8 @@ function clearFields() {
     nameField.value = ""
     emailField.value = ""
     messageField.value = ""
+}
+
+function deleteSendBtn() {
+    sentMsg.innerHTML = "your message has been sent"
 }
